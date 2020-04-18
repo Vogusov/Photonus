@@ -17,8 +17,16 @@
     </header>
     
     <main>
-      <div class="collections-container">
-        
+      <div class="collections-container">       
+      </div>
+
+      <div class="collection-photos-container invisible">
+        <span id="to-collections" class="navigation">< Back to collections </span>
+      </div>
+
+      <div class="photo-info-container invisible">
+        <span id="to-collections" class="navigation"> Show all collections </span>
+        <span id="to-collection" class="navigation">< Back to collection </span>
       </div>
       
     </main>
@@ -39,7 +47,9 @@
 
   <script src="js/script.js"></script>
   <script>
-
+    window.addEventListener('DOMContentLoaded', () => {
+      init();
+    });
   </script>
 </body>
 </html>
