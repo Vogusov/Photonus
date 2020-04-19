@@ -126,6 +126,7 @@ main {
 .col-title,
 .pic-title {
   margin: 5px;
+  margin-top: 20px;
 }
 
 .photo-info-container > img {
@@ -154,6 +155,10 @@ main {
   color: rgb(73, 73, 73);
   line-height: 30px;
   
+}
+
+.photo {
+  margin-top: 15px;
 }
 
 .bold {

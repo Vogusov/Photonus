@@ -136,7 +136,8 @@ function showPhoto() {
           <div class="photo-info-container" data-id="${photo.id}">
             <img src="${photo.urls.small}"
               alt="${photo.alt_description}"
-              title="${photo.alt_description ? photo.alt_description : 'awesome picture'}">
+              title="${photo.alt_description ? photo.alt_description : 'awesome picture'}"
+              class="photo">              
             </img>
             <div class="info-block">
               <span class="pic-info info-user">
