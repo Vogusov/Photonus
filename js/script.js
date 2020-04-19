@@ -79,6 +79,8 @@ function showCollection() {
   colTitle.classList.add('col-title');
   colTitle.innerHTML = target.dataset.title;
 
+  photosContainer.insertAdjacentElement('afterbegin', toCollections);
+
   console.log(`id: ${target.dataset.id}`);
 
   getResourse(`https://api.unsplash.com/collections/${target.dataset.id}/photos?client_id=RtRYI-ZK2IshBbG7ZKuzou2Rl9lrW-f43QKwSLfiNns`)
