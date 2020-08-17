@@ -27,7 +27,7 @@ async function getResourse(url) {
 
 function init() {
 
-  getResourse('https://api.unsplash.com/collections?client_id=RtRYI-ZK2IshBbG7ZKuzou2Rl9lrW-f43QKwSLfiNns&per_page=20')
+  getResourse('https://api.unsplash.com/collections?client_id=/*...*/&per_page=20')
   .then(res => {
     // console.log(res);
     return collections = res;
