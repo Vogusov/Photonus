@@ -1,6 +1,3 @@
-// https://api.unsplash.com/
-
-//  https://api.unsplash.com/photos/?client_id=RtRYI-ZK2IshBbG7ZKuzou2Rl9lrW-f43QKwSLfiNns
 const body = document.querySelector('body'),
       collectionsContainer = document.querySelector('.collections-container'),
       photosContainer = document.querySelector('.collection-photos-container'),
@@ -32,8 +29,7 @@ function init() {
 
   getResourse('https://api.unsplash.com/collections?client_id=RtRYI-ZK2IshBbG7ZKuzou2Rl9lrW-f43QKwSLfiNns&per_page=20')
   .then(res => {
-    console.log(res);
-    // collections = res;
+    // console.log(res);
     return collections = res;
   })
   .then(res => {
