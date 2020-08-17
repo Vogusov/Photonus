@@ -3,7 +3,8 @@ const body = document.querySelector('body'),
       photosContainer = document.querySelector('.collection-photos-container'),
       photoContainer =  document.querySelector('.photo-container'),
       toCollections = document.getElementById('to-collections'),
-      toCollection = document.getElementById('to-collection')
+      toCollection = document.getElementById('to-collection'),
+      accessKey = 'RtRYI-ZK2IshBbG7ZKuzou2Rl9lrW-f43QKwSLfiNns'
      
 
 let collections = [];
@@ -27,7 +28,7 @@ async function getResourse(url) {
 
 function init() {
 
-  getResourse('https://api.unsplash.com/collections?client_id=/*...*/&per_page=20')
+  getResourse(`https://api.unsplash.com/collections?client_id=${accessKey}&per_page=20`)
   .then(res => {
     // console.log(res);
     return collections = res;
@@ -79,7 +80,7 @@ function showCollection() {
 
   console.log(`id: ${target.dataset.id}`);
 
-  getResourse(`https://api.unsplash.com/collections/${target.dataset.id}/photos?client_id=RtRYI-ZK2IshBbG7ZKuzou2Rl9lrW-f43QKwSLfiNns`)
+  getResourse(`https://api.unsplash.com/collections/${target.dataset.id}/photos?client_id=${accessKey}`)
     .then(col => {
       console.log('selected collection: ', col);
       collection = col;
@@ -123,7 +124,7 @@ function showPhoto() {
   
   console.log('target: ', target);
     
-  getResourse(`https://api.unsplash.com/photos/${target.dataset.id}/?client_id=RtRYI-ZK2IshBbG7ZKuzou2Rl9lrW-f43QKwSLfiNns`)
+  getResourse(`https://api.unsplash.com/photos/${target.dataset.id}/?client_id=${accessKey}`)
     .then(photo => {picTitle.innerHTML = photo.alt_description;
     console.log(photo)
     return photo;  
